@@ -1,40 +1,68 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/* Ini File CSS */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-body {
-    background-color: rgb(255, 255, 221);
+.logo-icon {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-image: url(https://picsum.photos/200);
+    background-size: cover;
 }
 
 nav {
-    justify-content: space-between;
-    background-color: orange;
     display: flex;
-    padding: 1rem 2rem;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 2rem;
+.left-rounded {
+    border-radius: 12px 0 0 12px;
 }
 
-nav ul li a {
+.right-rounded {
+    border-radius: 0 12px 12px 0;
+}
+
+nav>a {
+    border: 1px solid black;
+    padding: 8px;
     color: black;
     text-decoration: none;
-    font-weight: 600;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 8px 0;
-    transition: all;
-    transition-duration: 400ms;
-    border-bottom: 1px solid #ffffff00;
 }
 
-nav ul li a:hover {
-    color: white;
-    border-bottom: 1px solid yellow;
+.banner-image {
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-image-1 {
+    background-image: url(https://picsum.photos/500);
+}
+
+.banner-image-2 {
+    background-image: url(https://picsum.photos/501);
+}
+
+.banner-image-3 {
+    background-image: url(https://picsum.photos/502);
+}
+
+.content {
+    /* Opsinal */
+    height: 500px;
+}
+
+footer {
+    text-align: center;
+}
+
+/* CSS yang dijalankan di ukuran layar kurang dari 480px */
+@media only screen and (max-width: 480px) {
+    .main-header {
+        flex-direction: column;
+    }
 }

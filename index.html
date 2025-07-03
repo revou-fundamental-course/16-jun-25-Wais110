@@ -4,23 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
 </head>
 <body>
-    <nav>
-        <div class="logo"><img src="./gambar-revou.png" alt="RevoU" width="60px" height="60"></div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Our Profile</a></li>
-            <li><a href="#">Portofolio</a></li>
-            <li><a href="#">Message Us</a></li>
-        </ul>
-    </nav>
-        <div>
-            <section>
-                <h1>Hi , Welcome To Website</h1>
+    <header class="main-header">
+        <div class="logo-icon"></div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Our Profile</a>
+            <a href="#">Portofolio</a>
+            <a href="#">Message Us</a>
+        </nav>
+    </header>
+    <hr/>
+
+    <main>
+        <section>
+            <header id="home-page">
+                <h1>Hi <span id="user-greeting">User</span>, Welcome to our  website</h1>
                 <p>Ini adalah website latihan pertama</p>
-            </section>
-        </div>
+            </header>
+
+            <div class="banner-image banner-image-1"></div>
+            <div class="banner-image banner-image-2"></div>
+            <div class="banner-image banner-image-3"></div>
+        </section>
+
+        <section>
+            <header id="our-profile">
+                <h1>Our Profile</h1>
+            </header>
+            <div class="content"></div>
+        </section>
+
+        <section>
+            <header id="portofolio">
+                <h1>Portofolio</h1>
+            </header>
+            <div class="content"></div>
+        </section>
+
+        <section>
+            <header id="message-us">
+                <h1>Message Us</h1>
+            </header>
+
+            <div class="content">
+                <form action="">
+                    <div>
+                        <label for="name-input">Name:</label>
+                        <input type="text" name="name" id="name-input" placeholder="Nama" required>
+                    </div>
+                    <button type="button" id="submit-btn">Submit</button>
+                </form>
+                <div id="result-form"></div>
+            </div>
+        </section>
+    </main>
+    <hr/>
+    <footer>
+        <p>&copy; 2025 - all rights reserved</p>
+    </footer>
+        <script src="./js/script.js"></script>
 </body>
 </html>
