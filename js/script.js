@@ -1,5 +1,10 @@
 // Ini File Javascript
+const menuIcon = document.getElementById("menu-icon");
+const menuList = document.getElementById("menu-list");
 
+menuIcon.addEventListener("click", () => {
+  menuList.classList.toggle("hidden");
+});
 // Function to validate form
 function formValidation() {
     let nameInput = document.getElementById('name-input').value;
