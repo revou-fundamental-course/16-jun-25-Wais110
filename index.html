@@ -1,69 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
-</head>
-<body>
-    <header class="creative-header">
-        <div class="logo">
-            <img src="./asset/gambar-revou.png" alt="logo" class="logo">
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Our Profile</a></li>
-                <li><a href="#">Portofolio</a></li>
-                <li><a href="#">Message Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <header id="home-page">
-                <h1>Hi <span id="user-greeting">User</span>, Welcome to our  website</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="">
+        <img src="./asset/gambar-revou.png" alt="my-avatar" />
+      </div>
+      <div id="menu-icon" class="menu-icon">
+        <i class="ph-fill ph-list"></i>
+      </div>
+      <ul id="menu-list" class="hidden">
+        <li>
+          <a href="#section-1">Home</a>
+        </li>
+        <li>
+          <a href="#section-2">Our Profile</a>
+        </li>
+        <li>
+          <a href="#section-3">Portofolio</a>
+        </li>
+        <li>
+          <a href="#section-4">Message Us</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="section-1" class="hero" style="background-image: url(./asset/abstract-yellow-diagonal-futuristic-background-wallpaper-free-png.webp);">
+        <div class="hero-container">
+            <div class="column-satu">
+                <h1>Hi <span id="user-greeting">User</span>, Welcome to our website</h1>
                 <p>Ini adalah website latihan pertama</p>
-            </header>
-        </section>
-
-        <section>
-            <header id="our-profile">
-                <h1>Our Profile</h1>
-            </header>
-            <div class="content"></div>
-        </section>
-
-        <section>
-            <header id="portofolio">
-                <h1>Portofolio</h1>
-            </header>
-            <div class="content"></div>
-        </section>
-
-        <section>
-            <header id="message-us">
-                <h1>Message Us</h1>
-            </header>
-
-            <div class="content">
-                <form action="">
-                    <div>
-                        <label for="name-input">Name:</label>
-                        <input type="text" name="name" id="name-input" placeholder="Nama" required>
-                    </div>
-                    <button type="button" id="submit-btn">Submit</button>
-                </form>
-                <div id="result-form"></div>
             </div>
-        </section>
-    </main>
-    <hr/>
-    <footer>
-        <p>&copy; 2025 - all rights reserved</p>
-    </footer>
-        <script src="./js/script.js"></script>
-</body>
+        </div>
+    </section>
+    <section id="section-2" class="hero">
+        <div class="hero-container">
+            <div class="column-satu">
+                <h1>Our Profile</h1>
+                <p>Apa itu RevoU?</p>
+            </div>
+        </div>
+    </section>
+    <section id="section-3" class="hero">
+        <div class="hero-container">
+            <div class="column-satu">
+                <h1>Portofolio</h1>
+                <p>Berikut adalah beberapa portofolio kami</p>
+            </div>
+        </div>
+    </section>
+    <section id="section-4" class="container-message">
+        <div class="container">
+            <div class="column-satu">
+                <h1>Message Us</h1>
+                <form action="#" class="form">
+                    <div class="input-box">
+                        <label>Nama</label>
+                        <input type="text" placeholder="Nama" name="" id="">
+                    </div>
+                    <div class="input-box">
+                        <label>Tanggal Lahir</label>
+                        <input type="date" placeholder="Nama" name="" id="">
+                    </div>
+                    <div class="gender-box">
+                        <h3>Jenis Kelamin</h3>
+                        <div class="gender-option">
+                            <div class="gender">
+                        <input type="radio" placeholder="Nama" name="Gender" id="">
+                        <label for="check-male">Laki-laki</label>
+                            </div>
+                            <div class="gender">
+                        <input type="radio" placeholder="Nama" name="Gender" id="">
+                        <label for="check-female">Perempuan</label>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="input-box">
+                        <label>Pesan</label>
+                        <input type="textarea" placeholder="Pesan" name="" id="">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="/js/script.js"></script>
+  </body>
 </html>
