@@ -59,34 +59,39 @@
         <div class="container">
             <div class="column-satu">
                 <h1>Message Us</h1>
-                <form action="#" class="form">
+                <form action="" class="form">
                     <div class="input-box">
-                        <label>Nama</label>
-                        <input type="text" placeholder="Nama" name="" id="" required>
+                        <label for="name-input">Nama</label>
+                        <input type="text" placeholder="Nama" name="name" id="name-input" required>
                     </div>
                     <div class="input-box">
                         <label>Tanggal Lahir</label>
-                        <input type="date" placeholder="Nama" name="" id="" required>
+                        <input type="date" name="date" id="tanggal-born" required>
                     </div>
                     <div class="gender-box">
                         <h3>Jenis Kelamin</h3>
                         <div class="gender-option">
                             <div class="gender">
-                        <input type="radio" placeholder="Nama" name="Gender" id="">
+                        <input type="radio" name="Gender" id="Kelamin">
                         <label for="check-male">Laki-laki</label>
                             </div>
                             <div class="gender">
-                        <input type="radio" placeholder="Nama" name="Gender" id="">
+                        <input type="radio" name="Gender" id="Kelamin">
                         <label for="check-female">Perempuan</label>
                             </div>
                     </div>
                     </div>
                     <div class="input-box">
                         <label>Pesan</label>
-                        <input type="textarea" placeholder="Pesan" name="" id="" required>
+                        <input type="textarea" placeholder="Pesan" name="message" id="pesan" required>
                     </div>
-                    <button>Submit</button>
+                    <button type="button" id="submit-btn">Submit</button>
                 </form>
+            </div>
+            <div class="column-dua">
+                <div id="result-form">
+
+                </div>
             </div>
         </div>
     </section><hr>

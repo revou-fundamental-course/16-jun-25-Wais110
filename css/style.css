@@ -56,17 +56,17 @@ main {
 }
 
 .container-message{
-  display: flex;
+  display: grid;
   min-height: 100vh;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background: #e9a423;
   padding: 0 20px;
 }
 
 .container {
   position: relative;
-  max-width: 700px;
+  max-width: 100%;
   width: 100%;
   background: #ffffff;
   padding: 25px;
@@ -166,7 +166,7 @@ main {
 
 .hero-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   height: 95vh;
   padding: 3rem calc((100vw - 1300px) / 2);
 }
