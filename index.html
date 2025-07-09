@@ -10,7 +10,7 @@
   </head>
   <body>
     <nav>
-      <div class="">
+      <div>
         <img src="./asset/gambar-revou.png" alt="my-avatar" />
       </div>
       <div id="menu-icon" class="menu-icon">
@@ -34,7 +34,7 @@
     <section id="section-1" class="hero" style="background-image: url(./asset/abstract-yellow-diagonal-futuristic-background-wallpaper-free-png.webp);">
         <div class="hero-container">
             <div class="column-satu">
-                <h1>Hi <span id="user-greeting">User</span>, Welcome to our website</h1>
+                <h1>Hi <span id="greeting">User</span>, Welcome to our website</h1>
                 <p>Ini adalah website latihan pertama</p>
             </div>
         </div>
@@ -55,46 +55,46 @@
             </div>
         </div>
     </section>
-    <section id="section-4" class="container-message">
-        <div class="container">
-            <div class="column-satu">
-                <h1>Message Us</h1>
-                <form action="" class="form">
-                    <div class="input-box">
-                        <label for="name-input">Nama</label>
-                        <input type="text" placeholder="Nama" name="name" id="name-input" required>
-                    </div>
-                    <div class="input-box">
-                        <label>Tanggal Lahir</label>
-                        <input type="date" name="date" id="tanggal-born" required>
-                    </div>
-                    <div class="gender-box">
-                        <h3>Jenis Kelamin</h3>
-                        <div class="gender-option">
-                            <div class="gender">
-                        <input type="radio" name="Gender" id="Kelamin">
-                        <label for="check-male">Laki-laki</label>
-                            </div>
-                            <div class="gender">
-                        <input type="radio" name="Gender" id="Kelamin">
-                        <label for="check-female">Perempuan</label>
-                            </div>
-                    </div>
-                    </div>
-                    <div class="input-box">
-                        <label>Pesan</label>
-                        <input type="textarea" placeholder="Pesan" name="message" id="pesan" required>
-                    </div>
-                    <button type="button" id="submit-btn">Submit</button>
-                </form>
-            </div>
-            <div class="column-dua">
-                <div id="result-form">
+<section id="section-4" class="bg-form">
+  <div class="container">
+    <!-- Form Input -->
+    <form id="dataForm">
+      <h2>Message Us</h2>
 
-                </div>
-            </div>
-        </div>
-    </section><hr>
+      <label class="label-form" for="nama">Nama:</label>
+      <input type="text" id="nama" />
+      <div class="error" id="error-nama"></div>
+
+      <label class="label-form" for="tanggal">Tanggal Lahir:</label>
+      <input type="date" id="tanggal" />
+      <div class="error" id="error-tanggal"></div>
+
+      <label class="label-form">Jenis Kelamin:</label>
+      <input type="radio" name="gender" value="Laki-laki" id="laki" />
+      <label class="label-form" for="laki" style="display:inline;">Laki-laki</label>
+      <input type="radio" name="gender" value="Perempuan" id="perempuan" />
+      <label class="label-form" for="perempuan" style="display:inline;">Perempuan</label>
+      <div class="error" id="error-gender"></div>
+
+      <label class="label-form" for="pesan">Pesan:</label>
+      <textarea id="pesan" rows="4"></textarea>
+      <div class="error" id="error-pesan"></div>
+
+      <button type="submit">Kirim</button>
+    </form>
+
+    <!-- Display Data -->
+    <div class="output" id="output">
+      <h2>Data</h2>
+      <p><span id="waktu"></span></p>
+      <p><strong>Nama:</strong> <span id="output-nama"></span></p>
+      <p><strong>Tanggal Lahir:</strong> <span id="output-tanggal"></span></p>
+      <p><strong>Jenis Kelamin:</strong> <span id="output-gender"></span></p>
+      <p><strong>Pesan:</strong> <span id="output-pesan"></span></p>
+    </div>
+  </div>
+</section>
+    <hr>
     <footer>
         <div class="footerBottom">
             <p>Copyright &copy;2025; Designed by <span class="designer">RevoU</span></p>
