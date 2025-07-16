@@ -49,113 +49,84 @@ nav ul li a:hover {
   color: #fffb09;
   font-size: 40px;
   display: none;
+  cursor: pointer;
 }
 
 main {
   padding-top: 7rem;
 }
 
-.container-message{
-  display: grid;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: flex-start;
-  background: #e9a423;
-  padding: 0 20px;
-}
+    section.container {
+      background-color: #fff3cd; /* kuning */
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
 
-.container {
-  position: relative;
-  max-width: 100%;
-  width: 100%;
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px #77450c;
-}
+    form, .output {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 350px;
+    }
 
-.container .form {
-  margin-top: -10px;
-}
+    h2 {
+      margin-top: 0;
+    }
 
-.form .input-box {
-  width: 100%;
-  margin-top: 20px;
-}
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: bold;
+    }
 
-.input-box label {
-  color: #333;
-}
+    input[type="text"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 4px;
+    }
 
-.form .input-box input {
-  position: relative;
-  height: 50px;
-  width: 100%;
-  outline: none;
-  font-size: 1rem;
-  color: #707070;
-  margin-top: 8px;
-  border: 1px solid;
-  border-radius: 6px;
-  padding: 0 15px;
-}
+    input[type="radio"],label {
+      margin-top: 5px;
+      display: inline;
+      cursor: pointer;
+    }
 
-.form .column {
-  display: flex;
-  column-gap: 15px;
-}
+    textarea {
+      resize: vertical;
+    }
 
-.form :where(.gender-option, .gender) {
-  display: flex;
-  align-items: center;
-  column-gap: 50px;
-  flex-wrap: wrap;
-}
+    button {
+      margin-top: 16px;
+      padding: 10px 20px;
+      background-color: #e9a423;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
 
-.form .gender {
-  column-gap: 5px;
-}
+    button:hover {
+      background-color: #8a6115;
+    }
 
-.gender input {
-  accent-color: #e9a423;
-}
+    .output {
+      display: none;
+    }
 
-.gender label {
-  color: #707070;
-}
-
-.form :where(.gender input, .gender label) {
-  cursor: pointer;
-}
-
-.form .gender-box {
-  margin-top: 20px;
-}
-
-.gender-box h3 {
-  color: #333;
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 8px;
-}
-
-.form button {
-  height: 55px;
-  width: 100%;
-  color: #fff;
-  background-color: #e9a423;
-  border-radius: 6px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 400;
-  margin-top: 30px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.form button:hover {
-  background-color: #77450c;
-}
+    p {
+      margin: 6px 0;
+    }
 
 .hero {
   background: #fff;
@@ -177,7 +148,7 @@ main {
   justify-content: center;
   align-items: flex-start;
   color: #000;
-  padding: 0rem 2rem;
+  padding: 2rem;
 }
 
 .column-satu h1 {
@@ -189,18 +160,6 @@ main {
   margin-bottom: 2rem;
   font-size: 1.5rem;
   line-height: 1.5;
-}
-
-.column-dua {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0rem 2rem;
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
 }
 
 footer {
@@ -225,7 +184,7 @@ footer {
   margin: 0px 5px;
 }
 
-@media only screen and (max-width: 578px) {
+@media only screen and (max-width: 768px) {
   nav {
     flex-wrap: wrap;
     position: fixed;
@@ -249,9 +208,5 @@ footer {
   .menu-icon {
     display: flex;
     align-items: center;
-  }
-
-  .form column {
-    flex-wrap: wrap;
   }
 }

@@ -55,45 +55,34 @@
             </div>
         </div>
     </section>
-<section id="section-4" class="bg-form">
-  <div class="container">
-    <!-- Form Input -->
-    <form id="dataForm">
-      <h2>Message Us</h2>
+<section id="section-4" class="container" style="background-color: #e9a423;">
+  <form id="userForm">
+    <h2>Message Us</h2>
+    <label>Nama:
+      <input type="text" id="nama" pattern="[A-Za-z\s]+" oninput="validasiNama(this)" required>
+    </label>
+    <label>Tanggal Lahir:
+      <input type="date" id="tanggalLahir" required>
+    </label>
+    <label>Jenis Kelamin:</label>
+    <label><input type="radio" name="gender" value="Laki-laki" required> Laki-laki</label>
+    <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+    <label>Pesan:
+      <textarea id="pesan" rows="4" required></textarea>
+    </label>
+    <button type="submit">Kirim</button>
+  </form>
 
-      <label class="label-form" for="nama">Nama:</label>
-      <input type="text" id="nama" />
-      <div class="error" id="error-nama"></div>
-
-      <label class="label-form" for="tanggal">Tanggal Lahir:</label>
-      <input type="date" id="tanggal" />
-      <div class="error" id="error-tanggal"></div>
-
-      <label class="label-form">Jenis Kelamin:</label>
-      <input type="radio" name="gender" value="Laki-laki" id="laki" />
-      <label class="label-form" for="laki" style="display:inline;">Laki-laki</label>
-      <input type="radio" name="gender" value="Perempuan" id="perempuan" />
-      <label class="label-form" for="perempuan" style="display:inline;">Perempuan</label>
-      <div class="error" id="error-gender"></div>
-
-      <label class="label-form" for="pesan">Pesan:</label>
-      <textarea id="pesan" rows="4"></textarea>
-      <div class="error" id="error-pesan"></div>
-
-      <button type="submit">Kirim</button>
-    </form>
-
-    <!-- Display Data -->
-    <div class="output" id="output">
-      <h2>Data</h2>
-      <p><span id="waktu"></span></p>
-      <p><strong>Nama:</strong> <span id="output-nama"></span></p>
-      <p><strong>Tanggal Lahir:</strong> <span id="output-tanggal"></span></p>
-      <p><strong>Jenis Kelamin:</strong> <span id="output-gender"></span></p>
-      <p><strong>Pesan:</strong> <span id="output-pesan"></span></p>
-    </div>
+  <div class="output" id="output">
+    <h2>Form Output</h2>
+    <p><strong>Current time:</strong> <span id="waktu"></span></p>
+    <p><strong>Nama:</strong> <span id="outNama"></span></p>
+    <p><strong>Tanggal Lahir:</strong> <span id="outTanggalLahir"></span></p>
+    <p><strong>Jenis Kelamin:</strong> <span id="outGender"></span></p>
+    <p><strong>Pesan:</strong> <span id="outPesan"></span></p>
   </div>
 </section>
+
     <hr>
     <footer>
         <div class="footerBottom">

@@ -10,60 +10,60 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-const MenuIcon = document.getElementById("menu-icon");
+const MenuIcon = document.getElementBySId("menu-icon");
 const menuList = document.getElementById("menu-list");
 
 MenuIcon.addEventListener("click", () => {
     menuList.classList.toggle("hidden");
 });
 
-document.getElementById('dataForm').addEventListener('submit', function (e) {
+    function validasiNama(input) {
+      // Hanya huruf dan spasi
+      let value = input.value.replace(/[^a-zA-Z\s]/g, '');
+
+      // Kapitalisasi huruf pertama tiap kata
+      value = value.replace(/\b\w/g, function(char) {
+        return char.toUpperCase();
+      });
+
+      input.value = value;
+    }
+
+  document.getElementById('userForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Reset error messages
-    document.querySelectorAll('.error').forEach(el => el.textContent = '');
+    const nama = document.getElementById('nama').value;
+    const tanggalLahir = document.getElementById('tanggalLahir').value;
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+    const pesan = document.getElementById('pesan').value;
 
-    const nama = document.getElementById('nama').value.trim();
-    const tanggal = document.getElementById('tanggal').value;
-    const gender = document.querySelector('input[name="gender"]:checked');
-    const pesan = document.getElementById('pesan').value.trim();
+    const output = document.getElementById('output');
+    const waktu = new Date();
 
-    let isValid = true;
+    // Offset GMT
+    const offsetMenit = -waktu.getTimezoneOffset();
+    const offsetJam = offsetMenit / 60;
+    const gmtString = `GMT${offsetJam >= 0 ? '+' : ''}${offsetJam}`;
 
-    if (!nama) {
-      document.getElementById('error-nama').textContent = 'Nama wajib diisi.';
-      isValid = false;
-    }
+    // Format waktu
+    const hari = waktu.toLocaleDateString('en-GB', { weekday: 'long' });
+    const bulan = waktu.toLocaleDateString('en-GB', { month: 'long' });
+    const tanggal = waktu.getDate();
+    const tahun = waktu.getFullYear();
+    const jam = waktu.toLocaleTimeString('en-GB');
 
-    if (!tanggal) {
-      document.getElementById('error-tanggal').textContent = 'Tanggal lahir wajib diisi.';
-      isValid = false;
-    }
+    // Format tanggal lahir dd/mm/yyyy
+    const tglLahir = new Date(tanggalLahir);
+    const tglFormatted = ('0' + tglLahir.getDate()).slice(-2) + '/' +
+                         ('0' + (tglLahir.getMonth() + 1)).slice(-2) + '/' +
+                         tglLahir.getFullYear();
 
-    if (!gender) {
-      document.getElementById('error-gender').textContent = 'Pilih jenis kelamin.';
-      isValid = false;
-    }
+    // Tampilkan output
+    document.getElementById('waktu').textContent = `${hari} ${bulan} ${tanggal} ${tahun} ${jam} ${gmtString}`;
+    document.getElementById('outNama').textContent = nama;
+    document.getElementById('outTanggalLahir').textContent = tglFormatted;
+    document.getElementById('outGender').textContent = gender;
+    document.getElementById('outPesan').textContent = pesan;
 
-    if (!pesan) {
-      document.getElementById('error-pesan').textContent = 'Pesan wajib diisi.';
-      isValid = false;
-    }
-
-    if (isValid) {
-      const dateObj = new Date();
-    const options = { day: '2-digit', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false };
-    const waktuSekarang = dateObj.toLocaleDateString('id-ID', options);
-      
-
-      // Set output
-      document.getElementById('waktu').textContent = waktuSekarang;
-      document.getElementById('output-nama').textContent = nama;
-      document.getElementById('output-tanggal').textContent = tanggal;
-      document.getElementById('output-gender').textContent = gender.value;
-      document.getElementById('output-pesan').textContent = pesan;
-
-      // Tampilkan div output
-      document.getElementById('output').style.display = 'block';
-    }
+    output.style.display = 'block';
   });
